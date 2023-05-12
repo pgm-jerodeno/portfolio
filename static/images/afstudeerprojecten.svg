@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.4 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff059f;
+      }
+
+      .cls-2 {
+        fill: #ff1f4f;
+      }
+
+      .cls-3 {
+        fill: #0fc7ff;
+      }
+    </style>
+  </defs>
+  <g id="Laag_1-2" data-name="Laag 1">
+    <g id="Logo">
+      <g id="top">
+        <polygon class="cls-3" points="443.4 128 443.4 128.17 221.7 255 0 128.17 0 128 221.7 0 443.4 128"/>
+      </g>
+      <g id="right_bottom" data-name="right bottom">
+        <polygon class="cls-2" points="443.4 128.52 443.4 384 221.7 512 443.4 128.52"/>
+      </g>
+      <polygon id="left_top" data-name="left top" points="221.7 255 221.7 512 0 128.52 0 128.17 221.7 255"/>
+      <polygon id="left_bottom" data-name="left bottom" class="cls-1" points="221.7 512 0 384 0 128.52 221.7 512"/>
+      <polygon points="443.4 128.17 443.4 128.52 221.7 512 221.7 255 443.4 128.17"/>
+    </g>
+  </g>
+</svg>

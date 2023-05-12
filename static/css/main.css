@@ -1,0 +1,8 @@
+.projects {
+  display: flex;
+}
+
+.project {
+  width: 10rem;
+  height: 10rem;
+}
