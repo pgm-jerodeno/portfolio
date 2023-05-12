@@ -7,10 +7,13 @@
       const repos = await this.getRepos()
       this.generateHTMLForRepos(repos);
       this.generateProjectDetails(repos);
+      this.closeButton();
     },
     cacheElements() {
       this.$projects = document.querySelector('.projects');
-      this.$projectDetails = document.querySelector('.project-details')
+      this.$projectDetails = document.querySelector('.project-details');
+      this.$projectDetailsWrapper = document.querySelector('.project-details__wrapper');
+      this.$closeButton = document.querySelector('.close-button');
     },
     async getRepos() {
       let repos = await this.gitApi.getRepos('pgm-jerodeno');
@@ -18,9 +21,6 @@
       return repos;
     },
     generateHTMLForRepos(repos) {
-      // let repos = await this.gitApi.getRepos('pgm-jerodeno');
-      // repos = repos.filter((repo) => {return repo.name !== 'pgm-jerodeno'});
-      // console.log(repos);
       let output = '';
       repos.forEach(async (repo) => {
         let reponame = repo.name;
@@ -38,7 +38,6 @@
       $projectsList = document.querySelectorAll('.project');      
       $projectsList.forEach((project) => {
         project.addEventListener('click', async (ev) => {
-          // const projects = await this.gitApi.getRepos('pgm-jerodeno');
           const id = ev.currentTarget.dataset.id;
           const project = projects.find((project) => project.id == id);
           let projectname = project.name;
@@ -49,10 +48,15 @@
           <h3>${projectname}</h3>
           <p>${project.description}</p>
           <a href="${project.html_url}" target="blank">Bekijk de code</a>`
-          // this.$projectDetailsWrapper.classList.toggle('isopen');
+          this.$projectDetailsWrapper.classList.toggle('isopen');
         })
       });
-    }
+    },
+    closeButton() {
+      this.$closeButton.addEventListener('click', () => {
+        this.$projectDetailsWrapper.classList.toggle('isopen');
+      });
+    },
   }
   app.init();
 })()
