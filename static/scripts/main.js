@@ -44,10 +44,12 @@
           projectname = projectname.split('_');
           projectname = projectname.join(' ');
           projectname = projectname.toUpperCase();
-          this.$projectDetails.innerHTML = `<img src="static/images/${project.name}.png" alt="">
-          <h3>${projectname}</h3>
-          <p>${project.description}</p>
-          <a href="${project.html_url}" target="blank">Bekijk de code</a>`
+          this.$projectDetails.innerHTML = `<div class="picture"><img src="static/images/${project.name}.png" alt=""></div>
+          <div class="info">
+            <h3>${projectname}</h3>
+            <p>${project.description}</p>
+            <a href="${project.html_url}" target="blank">Bekijk de code</a>
+          </div>`
           this.$projectDetailsWrapper.classList.toggle('isopen');
         })
       });
