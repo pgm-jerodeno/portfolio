@@ -1,13 +1,66 @@
+/**
+  * General
+  */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/**
+  * Header
+  */
+
+nav {
+  padding: 1rem 2rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+/**
+  * Main
+  */
+
+main {
+  width: 50%;
+  margin: 5rem auto;
+}
+
+.about {
+  margin-bottom: 2rem;
+}
+
+.projects__wrapper h1 {
+  display: block;
+  width: max-content;
+  margin: 0 auto 1rem;
+}
+
 .projects {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .project {
-  width: 15rem;
-  background-color: blue;
+  width: 17rem;
+  height: 10rem;
+  padding: 1rem;
+  /* background-color: blue; */
   text-align: center;
-  /* height: 10rem; */
+  border-radius: .625rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px darkgray;
 }
 
 .project:hover {
@@ -18,13 +71,14 @@
   width: 100%;
   height: 5rem;
   object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .project-details__wrapper {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  transform: translateX(-100vw);
+  transform: translateX(-125vw);
   position: fixed;
   top: 0;
 }
@@ -58,5 +112,21 @@
 }
 
 .project-details__wrapper.isopen {
-  transform: translateX(0);
+  transform: translateX(-25vw);
+}
+
+/**
+  * Footer
+  */
+
+footer .socials {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+footer .socials a svg {
+height: 2.5rem;
 }
