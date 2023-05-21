@@ -18,6 +18,7 @@
     async getRepos() {
       let repos = await this.gitApi.getRepos('pgm-jerodeno');
       repos = repos.filter((repo) => {return repo.name !== 'pgm-jerodeno'});
+      repos = repos.filter((repo) => {return repo.name !== 'portfolio'});
       return repos;
     },
     generateHTMLForRepos(repos) {
