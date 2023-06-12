@@ -157,6 +157,20 @@ main {
   padding: 0;
 }
 
+#form__contact input, #form__contact textarea, #form__contact button {
+  border-radius: .3125rem;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px 2px darkgray;
+}
+
+#form__contact button {
+  display: block;
+  background-color: white;
+  font-weight: 700;
+  width: max-content;
+  margin: 1.5rem auto 0;
+}
+
 #form__contact .input-wrapper {
   display: flex;
   flex-direction: column;
