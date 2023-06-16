@@ -16,6 +16,8 @@ body {
 
 nav {
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -25,8 +27,16 @@ nav a {
   font-weight: 700;
 }
 
+nav a svg {
+  height: 1.3rem;
+}
+
 nav a:hover {
   color: gray;
+}
+
+nav a:hover svg {
+  fill: gray
 }
 
 /**
@@ -139,6 +149,26 @@ main {
   transform: translateX(-25vw);
 }
 
+.project-details__wrapper .project-details .info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.project-details__wrapper .project-details .info .site {
+  padding: 1rem;
+  margin: 2rem auto 0;
+  text-align: center;
+  width: fit-content;
+  border-radius: .625rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px darkgray;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+
+}
+
 /**
   * Contact
   */
@@ -200,6 +230,7 @@ main {
 
 footer .socials {
   display: flex;
+  align-items: center;
   gap: 1rem;
   width: max-content;
   margin: 0 auto;
@@ -207,5 +238,10 @@ footer .socials {
 }
 
 footer .socials a svg {
-height: 2.5rem;
+  height: 2.5rem;
+}
+
+footer .socials a:nth-child(3) svg,
+footer .socials a:nth-child(4) svg {
+  height: 2rem;
 }

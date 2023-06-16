@@ -36,6 +36,7 @@
       this.$projects.innerHTML = output;
     },
     async generateProjectDetails(projects) {
+      console.log(projects);
       $projectsList = document.querySelectorAll('.project');      
       $projectsList.forEach((project) => {
         project.addEventListener('click', async (ev) => {
@@ -49,7 +50,8 @@
           <div class="info">
             <h3>${projectname}</h3>
             <p>${project.description}</p>
-            <a href="${project.html_url}" target="blank">Bekijk de code</a>
+            <a href="${project.html_url}" target="blank" class="code">Bekijk de code</a>
+            <a href="https://pgm-jerodeno.github.io/${project.name}/" target="blank" class="site">Bekijk de site</a>
           </div>`
           this.$projectDetailsWrapper.classList.toggle('isopen');
         })
